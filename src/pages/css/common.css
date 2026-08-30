@@ -288,6 +288,12 @@ textarea {
     font-weight: 600;
 }
 
+.optional-star {
+    color: #e23c3c;
+    margin: 0 2px;
+    font-weight: 700;
+}
+
 .field input,
 .field select,
 .field textarea {
@@ -350,6 +356,45 @@ textarea {
 .auth-foot a {
     color: var(--blue);
     font-weight: 600;
+}
+
+.inline-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: end;
+}
+
+.captcha-img {
+    width: 120px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--blue-soft);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.btn-send {
+    height: 44px;
+    padding: 0 16px;
+    white-space: nowrap;
+    border-radius: 12px;
+}
+
+.apply-jump {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.apply-jump a {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.apply-jump a:hover {
+    color: var(--yellow-dark);
 }
 
 .section {
@@ -440,6 +485,16 @@ textarea {
 
     .auth-card h1 {
         font-size: 24px;
+    }
+
+    .inline-row {
+        grid-template-columns: 1fr;
+    }
+
+    .captcha-img,
+    .btn-send {
+        width: 100%;
+        height: 44px;
     }
 
     .btn-lg {

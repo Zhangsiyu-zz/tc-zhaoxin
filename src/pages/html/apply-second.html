@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>报名 · TC实验室招新</title>
+    <title>二面报名 · TC实验室招新</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,13 +32,13 @@
 
     <main class="auth-shell">
         <section class="auth-card wide">
-            <div class="auth-kicker">ROUND 1</div>
-            <h1>一面报名</h1>
-            <p class="lead">请选择一个主攻方向，提交一面报名。通过一面后，可前往二面报名。</p>
+            <div class="auth-kicker">ROUND 2</div>
+            <h1>二面报名</h1>
+            <p class="lead">仅一面通过后填写。请确认方向，并补充二面想展示的内容。</p>
             <form class="form-grid" method="post" action="">
-                <input type="hidden" name="round" value="1">
+                <input type="hidden" name="round" value="2">
                 <div class="field">
-                    <label>意向方向</label>
+                    <label>报名方向</label>
                     <div class="dir-pick">
                         <label class="dir-option">
                             <input type="radio" name="direction" value="embedded">
@@ -63,17 +63,13 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="intro">自我介绍</label>
-                    <textarea id="intro" name="intro" placeholder="技术基础、做过的项目、为什么想加入 TC 实验室"></textarea>
+                    <label for="secondIntro">二面补充说明<span class="optional-star">*</span>选填</label>
+                    <textarea id="secondIntro" name="secondIntro" placeholder="一面之后的进展、想展示的项目或问题"></textarea>
                 </div>
-                <div class="field">
-                    <label for="experience">相关经历<span class="optional-star">*</span>选填</label>
-                    <textarea id="experience" name="experience" placeholder="竞赛、课程设计或个人作品"></textarea>
-                </div>
-                <button class="btn btn-accent btn-block btn-lg" type="submit">提交一面报名</button>
+                <button class="btn btn-accent btn-block btn-lg" type="submit">提交二面报名</button>
             </form>
             <p class="apply-jump">
-                <a href="apply-second.html">一面已经通过，去报名二面 -&gt;</a>
+                <a href="apply.html">&lt;- 返回一面报名</a>
             </p>
         </section>
     </main>
@@ -81,7 +77,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <span class="footer-brand">TC 实验室</span>
-            <span>学生端报名</span>
+            <span>学生端 · 二面报名</span>
         </div>
     </footer>
 </body>

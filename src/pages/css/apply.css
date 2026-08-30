@@ -1,0 +1,46 @@
+.dir-pick {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dir-option {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+.dir-option:hover {
+    border-color: var(--blue-mid);
+}
+
+.dir-option:has(input:checked) {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+    box-shadow: 0 0 0 4px rgba(0, 94, 184, 0.08);
+}
+
+.dir-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dir-option b {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.dir-option span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+@media (max-width: 640px) {
+    .dir-pick {
+        grid-template-columns: 1fr;
+    }
+}

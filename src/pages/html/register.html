@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 · TC实验室招新</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">
+                <span class="logo-mark">TC</span>
+                <span>TC 实验室</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#directions">四大方向</a></li>
+                <li><a href="apply.html">报名</a></li>
+                <li><a href="result.html">面试结果</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="login.html">登录</a>
+                <a class="btn btn-primary" href="apply.html">立即报名</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-shell">
+        <section class="auth-card wide">
+            <div class="auth-kicker">CREATE ACCOUNT</div>
+            <h1>学生注册</h1>
+            <p class="lead">填写学号、姓名与专业等信息，用于后续报名与面试通知。</p>
+            <div class="register-steps" aria-hidden="true">
+                <span class="is-on"></span>
+                <span></span>
+                <span></span>
+            </div>
+            <form class="form-grid" method="post" action="">
+                <div class="form-grid two">
+                    <div class="field">
+                        <label for="studentId">学号</label>
+                        <input id="studentId" name="studentId" type="text" placeholder="例如 20240001">
+                    </div>
+                    <div class="field">
+                        <label for="name">姓名</label>
+                        <input id="name" name="name" type="text" placeholder="请输入真实姓名">
+                    </div>
+                    <div class="field">
+                        <label for="major">专业</label>
+                        <input id="major" name="major" type="text" placeholder="例如 计算机科学与技术">
+                    </div>
+                    <div class="field">
+                        <label for="grade">年级</label>
+                        <select id="grade" name="grade">
+                            <option value="">请选择年级</option>
+                            <option value="2026">2026 级</option>
+                            <option value="2025">2025 级</option>
+                            <option value="2024">2024 级</option>
+                            <option value="2023">2023 级</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="phone">手机号</label>
+                        <input id="phone" name="phone" type="tel" placeholder="用于面试通知">
+                    </div>
+                    <div class="field">
+                        <label for="email">邮箱</label>
+                        <input id="email" name="email" type="email" placeholder="选填">
+                    </div>
+                    <div class="field">
+                        <label for="password">密码</label>
+                        <input id="password" name="password" type="password" placeholder="设置登录密码">
+                    </div>
+                    <div class="field">
+                        <label for="passwordConfirm">确认密码</label>
+                        <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="再次输入密码">
+                    </div>
+                </div>
+                <p class="field-hint">注册完成后可前往登录，再选择方向提交报名。</p>
+                <button class="btn btn-primary btn-block btn-lg" type="submit">提交注册</button>
+            </form>
+            <p class="auth-foot">已有账号？<a href="login.html">返回登录</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">TC 实验室</span>
+            <span>学生端注册</span>
+        </div>
+    </footer>
+</body>
+</html>

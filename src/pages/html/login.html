@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 · TC实验室招新</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="index.html">
+                <span class="logo-mark">TC</span>
+                <span>TC 实验室</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#directions">四大方向</a></li>
+                <li><a href="apply.html">报名</a></li>
+                <li><a href="result.html">面试结果</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="btn btn-ghost" href="register.html">注册</a>
+                <a class="btn btn-primary" href="apply.html">立即报名</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-shell">
+        <section class="auth-card">
+            <div class="login-badge">学生端</div>
+            <div class="auth-kicker">SIGN IN</div>
+            <h1>登录招新系统</h1>
+            <p class="lead">使用学号与密码进入报名与面试结果页面。</p>
+            <form class="form-grid" method="post" action="">
+                <div class="field">
+                    <label for="studentId">学号</label>
+                    <input id="studentId" name="studentId" type="text" placeholder="请输入学号" autocomplete="username">
+                </div>
+                <div class="field">
+                    <label for="password">密码</label>
+                    <input id="password" name="password" type="password" placeholder="请输入密码" autocomplete="current-password">
+                </div>
+                <div class="form-extra">
+                    <label class="check">
+                        <input type="checkbox" name="remember">
+                        记住我
+                    </label>
+                    <a href="register.html">还没有账号？</a>
+                </div>
+                <button class="btn btn-primary btn-block btn-lg" type="submit">登录</button>
+            </form>
+            <p class="auth-foot">没有账号？<a href="register.html">立即注册</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">TC 实验室</span>
+            <span>学生端登录</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const pages = ['index', 'login', 'register', 'apply', 'result'];
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -12,20 +14,25 @@ module.exports = {
         clean: true,
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'src/pages/html'),
-        },
+        static: [
+            {
+                directory: path.join(__dirname, 'src/pages/html'),
+            },
+            {
+                directory: path.join(__dirname, 'src/pages/css'),
+                publicPath: '/css',
+            },
+        ],
         port: 3000,
         open: true,
         hot: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/pages/html/index.html',
-            filename: 'index.html',
-            chunks: ['index'],
-        }),
-    ],
+    plugins: pages.map((name) => new HtmlWebpackPlugin({
+        template: `./src/pages/html/${name}.html`,
+        filename: `${name}.html`,
+        chunks: [],
+        inject: false,
+    })),
     module: {
         rules: [
             {

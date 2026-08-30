@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报名管理 - TC实验室</title>
+    <link rel="stylesheet" href="../../css/admin-applicants.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <h2>TC 管理后台</h2>
+            <ul class="sidebar-menu">
+                <li onclick="window.location.href='admin-dashboard.html'">学生管理</li>
+                <li class="active">报名管理</li>
+                <li onclick="window.location.href='admin-interview.html'">面试结果</li>
+                <li>修改密码</li>
+                <li>退出登录</li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-header">
+                <h3>报名信息管理</h3>
+                <div class="user-info">管理员：张三 | 退出</div>
+            </div>
+
+            <div class="content">
+                <div class="card">
+                    <div class="filter-bar">
+                        <input type="text" placeholder="按姓名搜索...">
+                        <select>
+                            <option value="">意向方向（全部）</option>
+                            <option value="embedded">嵌入式</option>
+                            <option value="fullstack">全栈</option>
+                            <option value="android">安卓</option>
+                        </select>
+                        <select>
+                            <option value="">面试时间（全部）</option>
+                            <option value="week1">第一周</option>
+                            <option value="week2">第二周</option>
+                        </select>
+                        <button>搜索</button>
+                        <button class="add-btn">+ 添加报名学生</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>邮箱</th>
+                                <th>意向方向</th>
+                                <th>电话</th>
+                                <th>面试时间</th>
+                                <th>面试状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>张三</td>
+                                <td>zhangsan@test.com</td>
+                                <td>前端</td>
+                                <td>13800000001</td>
+                                <td>2026-09-05</td>
+                                <td><span class="status-tag status-pass">通过</span></td>
+                                <td>
+                                    <button class="table-btn btn-edit">修改</button>
+                                    <button class="table-btn btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>李四</td>
+                                <td>lisi@test.com</td>
+                                <td>安卓</td>
+                                <td>13800000002</td>
+                                <td>2026-09-06</td>
+                                <td><span class="status-tag status-pending">待定</span></td>
+                                <td>
+                                    <button class="table-btn btn-edit">修改</button>
+                                    <button class="table-btn btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>王五</td>
+                                <td>wangwu@test.com</td>
+                                <td>嵌入式</td>
+                                <td>13800000003</td>
+                                <td>2026-09-06</td>
+                                <td><span class="status-tag status-fail">未通过</span></td>
+                                <td>
+                                    <button class="table-btn btn-edit">修改</button>
+                                    <button class="table-btn btn-delete">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+/* 全局通用样式 */
+:root {
+    --tc-blue: #005EB8;
+    --tc-orange: #F5A623;
+    --bg-gray: #F5F7FA;
+    --text-main: #333333;
+    --text-secondary: #666666;
+    --border-color: #E4E7ED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-gray);
+    color: var(--text-main);
+}
+
+/* 登录页样式 */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+}
+
+.login-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: var(--tc-blue);
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--tc-blue);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--tc-blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #004a94;
+}
+
+/* 后台主页面样式 */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 220px;
+    background-color: #001f3f;
+    /* 深蓝 */
+    color: white;
+    padding: 20px 0;
+}
+
+.admin-sidebar h3 {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-menu li.active {
+    background-color: var(--tc-orange);
+    color: #fff;
+    font-weight: bold;
+}
+
+.admin-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.admin-header {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-header h2 {
+    font-size: 18px;
+}
+
+.admin-user {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* 表格和卡片样式 */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-bar select,
+.filter-bar input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    outline: none;
+}
+
+.filter-bar select:focus,
+.filter-bar input:focus {
+    border-color: var(--tc-blue);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+.data-table th {
+    background-color: #f9fafc;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.table-btn {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background-color: #e6f7ff;
+    color: var(--tc-blue);
+}
+
+.btn-delete {
+    background-color: #fff1f0;
+    color: #ff4d4f;
+}
+
+/* 状态标签 */
+.status-tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.status-pass {
+    background-color: #f6ffed;
+    color: #52c41a;
+}
+
+.status-pending {
+    background-color: #fff7e6;
+    color: var(--tc-orange);
+}
+
+.status-fail {
+    background-color: #fff1f0;
+    color: #ff4d4f;
+}

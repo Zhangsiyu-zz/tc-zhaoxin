@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - TC实验室纳新系统</title>
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- 左侧导航栏 -->
+        <aside class="admin-sidebar">
+            <h3>TC 管理后台</h3>
+            <ul class="sidebar-menu">
+                <li class="active">学生管理</li>
+                <li onclick="window.location.href='admin-applicants.html'">报名管理</li>
+                <li onclick="window.location.href='admin-interview.html'">面试结果</li>
+                <li>退出登录</li>
+            </ul>
+        </aside>
+
+        <!-- 右侧主内容区 -->
+        <main class="admin-main">
+            <div class="admin-header">
+                <h2>学生列表管理</h2>
+                <div class="admin-user">欢迎回来，管理员</div>
+            </div>
+
+            <div class="card">
+                <!-- 筛选区域 -->
+                <div class="filter-bar">
+                    <input type="text" placeholder="按姓名搜索">
+                    <button class="table-btn btn-edit">搜索</button>
+                </div>
+
+                <!-- 数据表格（写死的静态演示数据） -->
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>专业</th>
+                            <th>电话</th>
+                            <th>邮箱</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20240001</td>
+                            <td>张三</td>
+                            <td>计算机科学</td>
+                            <td>13800000001</td>
+                            <td>zhangsan@example.com</td>
+                            <td>
+                                <button class="table-btn btn-edit">编辑</button>
+                                <button class="table-btn btn-delete">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20240002</td>
+                            <td>李四</td>
+                            <td>软件工程</td>
+                            <td>13800000002</td>
+                            <td>lisi@example.com</td>
+                            <td>
+                                <button class="table-btn btn-edit">编辑</button>
+                                <button class="table-btn btn-delete">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

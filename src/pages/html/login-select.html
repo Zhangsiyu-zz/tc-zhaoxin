@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录入口 - TC实验室</title>
+    <style>
+        /* 这里为了保证快速生效，我直接把样式写在 style 里了，你可以后续移动到 admin.css 或 common.css */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .select-container {
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        .select-container h1 {
+            color: #005EB8;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .select-container p {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .role-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .role-card {
+            background: #fff;
+            border: 1px solid #e4e7ed;
+            border-radius: 12px;
+            padding: 30px 40px;
+            width: 260px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .role-card:hover {
+            border-color: #005EB8;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 94, 184, 0.15);
+        }
+
+        .role-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .role-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #005EB8;
+        }
+
+        .role-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card-orange .role-title {
+            color: #F5A623;
+        }
+
+        .card-orange:hover {
+            border-color: #F5A623;
+            box-shadow: 0 8px 25px rgba(245, 166, 35, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="select-container">
+        <h1>TC 实验室纳新系统</h1>
+        <p>请选择您的身份登录</p>
+
+        <div class="role-cards">
+            <!-- 学生登录入口 -->
+            <a href="login.html" class="role-card">
+                <span class="role-icon">🎓</span>
+                <div class="role-title">学生登录</div>
+                <div class="role-desc">查看报名进度 / 面试结果</div>
+            </a>
+
+            <!-- 管理员登录入口 -->
+            <a href="admin-login.html" class="role-card card-orange">
+                <span class="role-icon">🛠️</span>
+                <div class="role-title">管理员登录</div>
+                <div class="role-desc">管理学生 / 审核报名信息</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -7,6 +7,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/js/entries/index.js',
+        register: './src/js/entries/register.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -26,15 +27,43 @@ module.exports = {
         port: 3001,
         open: true,
         hot: true,
+        // 跨域代理，解决后端接口访问问题
+        proxy: [
+            {
+                context: ['/api'], // 只要请求以 /api 开头
+                target: 'http://123.56.71.168:8081', // 就转发给后端的地址
+                changeOrigin: true,
+            }
+        ],
     },
-    plugins: pages.map((name) => new HtmlWebpackPlugin({
-        template: `./src/pages/html/${name}.html`,
-        filename: `${name}.html`,
-        chunks: [],
-        inject: false,
-    })),
+    plugins: [
+        // 首页
+        new HtmlWebpackPlugin({
+            template: './src/pages/html/index.html',
+            filename: 'index.html',
+            chunks: ['index'],
+            inject: true,
+        }),
+        // 注册页
+        new HtmlWebpackPlugin({
+            template: './src/pages/html/register.html',
+            filename: 'register.html',
+            chunks: ['register'],
+            inject: true,
+        }),
+    ],
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
@@ -47,5 +76,5 @@ module.exports = {
                 },
             },
         ],
-    },
+    }
 };

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注册 · TC实验室招新</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
+
 <body>
     <header class="site-header">
         <nav class="nav">
@@ -40,7 +43,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <form class="form-grid" method="post" action="">
+            <form class="form-grid" id="registerForm">
                 <div class="form-grid two">
                     <div class="field">
                         <label for="studentId">学号</label>
@@ -54,16 +57,7 @@
                         <label for="major">专业</label>
                         <input id="major" name="major" type="text" placeholder="例如 计算机科学与技术">
                     </div>
-                    <div class="field">
-                        <label for="grade">年级</label>
-                        <select id="grade" name="grade">
-                            <option value="">请选择年级</option>
-                            <option value="2026">2026 级</option>
-                            <option value="2025">2025 级</option>
-                            <option value="2024">2024 级</option>
-                            <option value="2023">2023 级</option>
-                        </select>
-                    </div>
+
                     <div class="field">
                         <label for="phone">手机号</label>
                         <input id="phone" name="phone" type="tel" placeholder="用于面试通知">
@@ -76,16 +70,12 @@
                         <label for="password">密码</label>
                         <input id="password" name="password" type="password" placeholder="设置登录密码">
                     </div>
-                    <div class="field">
-                        <label for="passwordConfirm">确认密码</label>
-                        <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="再次输入密码">
-                    </div>
                 </div>
                 <div class="field">
                     <label for="captcha">图片验证码</label>
                     <div class="inline-row">
                         <input id="captcha" name="captcha" type="text" placeholder="请输入图中字符" autocomplete="off">
-                        <img id="captchaImage" class="captcha-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='44'%3E%3Crect width='120' height='44' fill='%23e8f2fb'/%3E%3Ctext x='18' y='30' font-size='22' font-family='monospace' fill='%23005EB8' letter-spacing='6'%3EK7P2%3C/text%3E%3C/svg%3E" alt="图片验证码" title="点击刷新（逻辑自行接入）">
+                        <img id="captchaImage" class="captcha-img" alt="图片验证码" title="点击刷新">
                     </div>
                     <span class="field-hint">看不清可点击图片刷新，验证码由后端生成。</span>
                 </div>
@@ -103,4 +93,5 @@
         </div>
     </footer>
 </body>
+
 </html>

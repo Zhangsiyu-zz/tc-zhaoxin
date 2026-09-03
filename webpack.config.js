@@ -8,6 +8,7 @@ module.exports = {
     entry: {
         index: './src/js/entries/index.js',
         register: './src/js/entries/register.js',
+        login: './src/js/entries/login.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -49,6 +50,13 @@ module.exports = {
             template: './src/pages/html/register.html',
             filename: 'register.html',
             chunks: ['register'],
+            inject: true,
+        }),
+        // 登录页
+        new HtmlWebpackPlugin({
+            template: './src/pages/html/login.html',
+            filename: 'login.html',
+            chunks: ['login'],
             inject: true,
         }),
     ],

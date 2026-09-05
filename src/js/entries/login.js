@@ -1,4 +1,4 @@
-import request from "../api/api";
+import request from "../api/api.js";
 
 const loginForm = document.getElementById("loginForm")
 const studentId = document.getElementById("studentId")

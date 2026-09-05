@@ -1,12 +1,12 @@
-import axios from "axios";
+import axios from "axios"
 const request = axios.create({
     baseURL: '/api',
-    timeout: 10000,
-});
+    timeout: 10000
+})
 //拦截请求
 request.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('token')
         if (token) {
             config.headers.Authorization = token
         }
@@ -28,4 +28,4 @@ request.interceptors.response.use(
         return Promise.reject(error)
     }
 )
-export default request;
+export default request
